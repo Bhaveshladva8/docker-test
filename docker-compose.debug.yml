@@ -1,0 +1,11 @@
+
+version: '3.4'
+
+services:
+  dockertest:
+    image: dockertest
+    build:
+      context: .
+      dockerfile: docker-test/Dockerfile
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw

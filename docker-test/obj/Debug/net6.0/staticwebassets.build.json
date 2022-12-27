@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "e9qoYTDkn0Cc+YTA5KUsyN7MAPUTGU/EKJdLn7BJiSo=",
+  "Source": "docker-test",
+  "BasePath": "_content/docker-test",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
