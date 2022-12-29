@@ -12,10 +12,10 @@ USER appuser
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["docker-test/docker-test.csproj", "docker-test/"]
-RUN dotnet restore "docker-test/docker-test.csproj"
+COPY ["src/docker-test/docker-test.csproj", "src/docker-test/"]
+RUN dotnet restore "src/docker-test/docker-test.csproj"
 COPY . .
-WORKDIR "/src/docker-test"
+WORKDIR "src/src/docker-test"
 RUN dotnet build "docker-test.csproj" -c Release -o /app/build
 
 FROM build AS publish
