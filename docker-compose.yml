@@ -5,7 +5,7 @@ services:
   dockertest:
     image: dockertest
     build:
-      context: .
+      context: docker-test
       dockerfile: docker-test/Dockerfile
     ports:
       - 5100:5100
