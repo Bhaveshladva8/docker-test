@@ -12,7 +12,7 @@ USER appuser
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["home/vsts/work/1/s/docker-test/docker-test.csproj", "docker-test/"]
+COPY ["docker-test/docker-test.csproj", "docker-test/"]
 RUN dotnet restore "docker-test/docker-test.csproj"
 COPY . docker-test/
 WORKDIR "src/docker-test"
