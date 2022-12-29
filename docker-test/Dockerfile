@@ -16,7 +16,7 @@ COPY ["docker-test.csproj", "docker-test/"]
 RUN dotnet restore "docker-test/docker-test.csproj"
 COPY . docker-test/
 WORKDIR "src/docker-test"
-RUN dotnet build "docker-test.csproj" -c Release -o /app/build
+RUN dotnet build -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish "docker-test.csproj" -c Release -o /app/publish /p:UseAppHost=false
