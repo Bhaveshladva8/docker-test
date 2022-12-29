@@ -7,3 +7,5 @@ services:
     build:
       context: .
       dockerfile: docker-test/Dockerfile
+    ports:
+      - 5100:5100
