@@ -14,7 +14,7 @@ FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
 COPY ["docker-test.csproj", "docker-test/"]
 RUN dotnet restore "docker-test/docker-test.csproj"
-COPY . docker-test/
+#COPY . .
 WORKDIR "src/docker-test"
 RUN dotnet build "docker-test.csproj" -c Release -o /app/build
 
